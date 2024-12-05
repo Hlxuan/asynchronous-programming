@@ -21,3 +21,12 @@ function getPosts() {
 }
 
 getPosts()
+
+function createPost(post, cb) {
+  setTimeout(() => {
+    posts.push(post)
+    cb()
+  }, 2000)
+}
+
+createPost({ title: "帖子三", body: "这是帖子三" }, getPosts)
