@@ -12,3 +12,7 @@ function getData(endpoint) {
     XHR.send()
   }, Math.floor(Math.random() * 3000) + 1000)
 }
+
+getData("./movies.json")
+getData("./actors.json")
+getData("./directors.json")
