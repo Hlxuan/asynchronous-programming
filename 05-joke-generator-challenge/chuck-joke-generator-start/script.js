@@ -20,3 +20,5 @@ const generateJoke = () => {
 }
 
 jokeBtn.addEventListener("click", generateJoke)
+
+document.addEventListener("DOMContentLoaded", generateJoke)
