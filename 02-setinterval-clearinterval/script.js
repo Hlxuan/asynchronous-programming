@@ -15,6 +15,8 @@ function stopChange() {
   clearInterval(intervalID)
 }
 
+document.getElementById("start").addEventListener("click", startChange)
+
 document.getElementById("stop").addEventListener("click", stopChange)
 
 function changeColor() {
