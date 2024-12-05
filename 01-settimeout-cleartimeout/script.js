@@ -9,3 +9,11 @@ function changeText() {
   h1.textContent = "来自回调的输出"
 }
 setTimeout(changeText, 2000)
+
+const timerID = setTimeout(changeText, 3000)
+
+document.querySelector("#cancel").addEventListener("click", function () {
+  clearTimeout(timerID)
+  console.log("定时器 ID:", timerID)
+  console.log("定时器已取消")
+})
