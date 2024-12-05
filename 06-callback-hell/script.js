@@ -7,4 +7,8 @@ function getData(endpoint) {
       console.log(JSON.parse(this.responseText))
     }
   }
+
+  setTimeout(() => {
+    XHR.send()
+  }, Math.floor(Math.random() * 3000) + 1000)
 }
