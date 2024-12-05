@@ -1,7 +1,6 @@
-let intervalID = setInterval(myCallback, 1000)
-
-function myCallback() {
-  console.log(Date.now())
+let intervalID = setInterval(myCallback, 1000, "你好")
+function myCallback(a) {
+  console.log(a, Date.now())
 }
 
 function stopChange() {
