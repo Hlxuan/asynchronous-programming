@@ -16,3 +16,13 @@ function stopChange() {
 }
 
 document.getElementById("stop").addEventListener("click", stopChange)
+
+function changeColor() {
+  if (document.body.style.backgroundColor !== "black") {
+    document.body.style.backgroundColor = "black"
+    document.body.style.color = "white"
+  } else {
+    document.body.style.backgroundColor = "white"
+    document.body.style.color = "black"
+  }
+}
