@@ -31,3 +31,16 @@ Promise.all([moviesPromise, actorsPromise, directorsPromise])
   .catch((error) => {
     console.log(error)
   })
+
+const dummyPromise = new Promise((resolve, reject) => {
+  resolve("你好，世界")
+})
+
+Promise.all([
+  moviesPromise,
+  actorsPromise,
+  directorsPromise,
+  dummyPromise,
+]).then((data) => {
+  console.log(data)
+})
