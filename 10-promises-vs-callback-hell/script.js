@@ -21,12 +21,6 @@ function getData(endpoint) {
   })
 }
 
-getData("./movies.json", (data) => {
-  console.log(data)
-  getData("./actors.json", (data) => {
-    console.log(data)
-    getData("./directors.json", (data) => {
-      console.log(data)
-    })
-  })
+getData("./movies.json").then((movies) => {
+  console.log(movies)
 })
