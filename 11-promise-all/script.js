@@ -24,6 +24,6 @@ const moviesPromise = getData("./movies.json")
 const actorsPromise = getData("./actors.json")
 const directorsPromise = getData("./directors.json")
 
-moviesPromise.then((data) => {
+Promise.all([moviesPromise, actorsPromise, directorsPromise]).then((data) => {
   console.log(data)
 })
