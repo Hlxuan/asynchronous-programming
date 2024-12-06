@@ -19,3 +19,11 @@ new Promise((resolve, reject) => {
 }).then(() => {
   console.log("Promise 2已消耗")
 })
+
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve({ name: "John", age: 30 })
+  }, 1000)
+}).then((user) => {
+  console.log(user)
+})
