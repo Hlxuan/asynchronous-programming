@@ -21,6 +21,18 @@ function getData(endpoint) {
   })
 }
 
-getData("./movies.json").then((movies) => {
-  console.log(movies)
-})
+getData("./movies.json")
+  .then((movies) => {
+    console.log(movies)
+    return getData("./actors.json")
+  })
+  .then((actors) => {
+    console.log(actors)
+    return getData("./directors.json")
+  })
+  .then((directors) => {
+    console.log(directors)
+  })
+  .catch((error) => {
+    console.log("出现了问题")
+  })
