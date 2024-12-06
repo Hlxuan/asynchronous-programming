@@ -27,3 +27,22 @@ new Promise((resolve, reject) => {
 }).then((user) => {
   console.log(user)
 })
+
+const getUser = new Promise((resolve, reject) => {
+  const error = false
+  if (!error) {
+    resolve({ name: "John", age: 30 })
+  } else {
+    reject("发生错误。")
+  }
+})
+getUser
+  .then((user) => {
+    console.log(user)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+  .finally(() => {
+    console.log("Promise已解决或被拒绝。")
+  })
