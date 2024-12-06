@@ -9,7 +9,6 @@ function getData(endpoint) {
         if (this.status === 200) {
           resolve(JSON.parse(this.responseText))
         } else {
-          console.log(this.readyState)
           reject("Error: Something went wrong")
         }
       }
@@ -27,7 +26,6 @@ getData("./movies.json")
     return getData("./actors.json")
   })
   .then((actors) => {
-    console.log(actors)
     return getData("./directors.json")
   })
   .then((directors) => {
